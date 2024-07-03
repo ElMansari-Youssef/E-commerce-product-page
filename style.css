@@ -1,0 +1,177 @@
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --paleorange: hsl(25, 100%, 94%);
+    --verydarkblue: hsl(220, 13%, 13%);
+    --darkgrayishblue: hsl(219, 9%, 45%);
+    --grayishblue: hsl(220, 14%, 75%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    /*with 75% opacity for lightbox background */
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--white);
+    /* background-color: red; */
+}
+
+hr {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 0 8rem;
+
+}
+
+
+.header ul {
+
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.header ul li a {
+
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+.header .CartAvatarContainer {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.MainContainer .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.MainContainer .hero .ProductInfo {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.MainContainer .hero .ProductInfo .firstP {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--darkgrayishblue);
+}
+
+.MainContainer .hero .ProductInfo h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.MainContainer .hero .ProductInfo .description {
+    font-size: 15px;
+    color: var(--grayishblue);
+    max-width: 70%;
+    margin-bottom: 30px;
+}
+
+.MainContainer .hero .ProductInfo .PriceContainer {
+
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.MainContainer .hero .ProductInfo .PriceContainer .Price {
+
+    font-size: 20px;
+    font-weight: 800;
+
+}
+
+.MainContainer .hero .ProductInfo .PriceContainer .discount {
+
+    height: 30px;
+    width: 50px;
+    background-color: var(--verydarkblue);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.MainContainer .hero .ProductInfo .oldPrice {
+
+    color: var(--grayishblue);
+    font-size: 15px;
+    text-decoration: line-through;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+
+.MainContainer .hero .ProductInfo .AddTocardContainer {
+
+    display: flex;
+    gap: 20px;
+}
+
+.MainContainer .hero .ProductInfo .AddTocardContainer .ItemsNumber {
+    display: flex;
+    gap: 10px;
+    background-color: var(--grayishblue);
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.MainContainer .hero .ProductInfo .AddTocardContainer .ItemsNumber .item1,
+.item2,
+.item3 {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.MainContainer .hero .ProductInfo .AddTocardContainer .btn {
+
+    width: 10rem;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
