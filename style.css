@@ -65,8 +65,47 @@ hr {
     justify-content: center;
     align-items: center;
     gap: 40px;
+    margin-top: 5rem;
 
 }
+
+.MainContainer .hero .imageContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.MainContainer .hero .imageContainer .Main-image {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.MainContainer .hero .imageContainer .Main-image img {
+
+    width: 30rem;
+    height: 30rem;
+    border-radius: 10px;
+}
+
+
+.MainContainer .hero .imageContainer .thumbNails {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.MainContainer .hero .imageContainer .thumbNails img {
+
+    border-radius: 15px;
+    width: 6rem;
+    height: 6rem;
+}
+
 
 .MainContainer .hero .ProductInfo {
 
