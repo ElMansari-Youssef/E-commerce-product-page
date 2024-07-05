@@ -49,7 +49,38 @@ hr {
 
     text-decoration: none;
     font-size: 18px;
+    position: relative;
+    color: var(--grayishblue);
+    opacity: 1;
+    transition: opacity 1s ease;
 
+}
+
+
+.header ul li a:hover {
+
+    color: var(--black);
+    
+
+}
+
+.header ul li a::after{
+
+    content: '';
+    display: block;
+    opacity: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--orange);
+    position: absolute;
+    top: 50px;
+    transition: opacity 0.3s ease;
+}
+
+.header ul li a:hover::after{
+
+    opacity: 1;
+    
 }
 
 .header .CartAvatarContainer {
@@ -58,6 +89,63 @@ hr {
     align-items: center;
     gap: 20px;
 
+}
+
+.header .CartAvatarContainer svg {
+
+    cursor: pointer;
+}
+
+
+.header .CartAvatarContainer .myCartItems {
+
+
+    opacity: 0;
+    height: 200px;
+    width: 300px;
+    background-color: var(--white);
+    position: fixed;
+    top: 5rem;
+    right: 9rem;
+    /* padding: 10px; */
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    transition: opacity 0.3s ease-out;
+}
+
+.header .CartAvatarContainer .myCartItems .cartTxt{
+    padding: 10px;
+}
+
+.header .CartAvatarContainer .myCartItems .emptyCart{
+
+position: absolute;
+transform: translate(-50%, -50%);
+top: 60%;
+left: 50%;
+color: var(--grayishblue);
+}
+
+
+.header .CartAvatarContainer .myCartItems.show {
+
+    opacity: 1;
+}
+
+.header .CartAvatarContainer .myCartItems hr {
+
+    margin-top: 1.2rem;
+    width: 100%;
+    color: var(--paleorange);
+}
+
+.header .CartAvatarContainer img:hover {
+
+    cursor: pointer;
+    box-shadow: 0 0 0 3px var(--orange);
+    border-radius: 50%;
 }
 
 .MainContainer .hero {
@@ -76,8 +164,22 @@ hr {
     justify-content: center;
     align-items: center;
     gap: 20px;
-
 }
+
+.MainContainer .hero .imageContainer img {
+
+    background-color: transparent;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.MainContainer .hero .imageContainer img:hover {
+    cursor: pointer;
+    background-color: var(--grayishblue);
+    opacity: 0.7;
+    box-shadow: 0 0 0 3px var(--orange);
+}
+
+
 
 .MainContainer .hero .imageContainer .Main-image {
     display: flex;
@@ -89,8 +191,8 @@ hr {
     width: 30rem;
     height: 30rem;
     border-radius: 10px;
+    background-color: none;
 }
-
 
 .MainContainer .hero .imageContainer .thumbNails {
 
@@ -100,6 +202,7 @@ hr {
 }
 
 .MainContainer .hero .imageContainer .thumbNails img {
+
 
     border-radius: 15px;
     width: 6rem;
@@ -111,6 +214,7 @@ hr {
 
     display: flex;
     flex-direction: column;
+    max-width: 600px;
 
 }
 
@@ -131,8 +235,9 @@ hr {
 .MainContainer .hero .ProductInfo .description {
     font-size: 15px;
     color: var(--grayishblue);
-    max-width: 70%;
+    max-width: 50%;
     margin-bottom: 30px;
+    line-height: 1.5rem;
 }
 
 .MainContainer .hero .ProductInfo .PriceContainer {
@@ -202,6 +307,13 @@ hr {
     font-size: 20px;
 }
 
+.MainContainer .hero .ProductInfo .AddTocardContainer .ItemsNumber .item1:hover,
+.MainContainer .hero .ProductInfo .AddTocardContainer .ItemsNumber .item3:hover {
+
+    cursor: pointer;
+
+}
+
 .MainContainer .hero .ProductInfo .AddTocardContainer .btn {
 
     width: 10rem;
@@ -213,4 +325,11 @@ hr {
     justify-content: center;
     align-items: center;
     font-weight: 800;
+    transition: background-color 0.2s ease;
+}
+
+.MainContainer .hero .ProductInfo .AddTocardContainer .btn:hover {
+
+    cursor: pointer;
+    background-color: var(--paleorange);
 }
