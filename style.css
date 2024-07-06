@@ -7,6 +7,7 @@
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
     /*with 75% opacity for lightbox background */
+    --switcher: hidden;
 
 }
 
@@ -19,13 +20,61 @@
 body {
     font-family: 'Kumbh Sans', sans-serif;
     background-color: var(--white);
-    /* background-color: red; */
+
+
 }
+
+
 
 hr {
     width: 85%;
     margin: 0 auto;
 }
+
+.lightBox {
+
+    visibility: var(--switcher);
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    /* transition: opacity 1s ease, visibility 1s ease;*/
+    transition: opacity 1s ease;
+
+}
+
+.lightBox .closeSvg {
+
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.lightBox .closeSvg img{
+
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(330deg) brightness(109%) contrast(101%);
+}
+
+.lightBox .closeSvg img:hover {
+    filter: invert(60%) sepia(98%) saturate(2626%) hue-rotate(347deg) brightness(101%) contrast(101%);
+    cursor: pointer;
+
+}
+
+
+
+.lightBox.visible {
+
+    visibility: visible;
+    opacity: 1;
+    /* transition: opacity 1s ease, visibility 1s ease; */
+    transition: opacity 1s ease;
+}
+
+
 
 .header {
 
@@ -34,6 +83,28 @@ hr {
     align-items: center;
     padding: 20px;
     margin: 0 8rem;
+
+
+}
+
+.header::after {
+
+    content: '';
+    visibility: var(--switcher);
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    background: var(--black);
+    opacity: 0.7;
+    z-index: 99;
+    /* transition: opacity 1s ease, visibility 1s ease; */
+    transition: opacity 1s ease;
+}
+
+.header.visible::after {
+    visibility: visible;
+    opacity: 0.7;
+    transition: opacity 1s ease;
 
 }
 
@@ -60,11 +131,11 @@ hr {
 .header ul li a:hover {
 
     color: var(--black);
-    
+
 
 }
 
-.header ul li a::after{
+.header ul li a::after {
 
     content: '';
     display: block;
@@ -74,13 +145,13 @@ hr {
     background: var(--orange);
     position: absolute;
     top: 50px;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
 }
 
-.header ul li a:hover::after{
+.header ul li a:hover::after {
 
     opacity: 1;
-    
+
 }
 
 .header .CartAvatarContainer {
@@ -115,17 +186,17 @@ hr {
     transition: opacity 0.3s ease-out;
 }
 
-.header .CartAvatarContainer .myCartItems .cartTxt{
+.header .CartAvatarContainer .myCartItems .cartTxt {
     padding: 10px;
 }
 
-.header .CartAvatarContainer .myCartItems .emptyCart{
+.header .CartAvatarContainer .myCartItems .emptyCart {
 
-position: absolute;
-transform: translate(-50%, -50%);
-top: 60%;
-left: 50%;
-color: var(--grayishblue);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 50%;
+    color: var(--grayishblue);
 }
 
 
@@ -157,7 +228,8 @@ color: var(--grayishblue);
 
 }
 
-.MainContainer .hero .imageContainer {
+.MainContainer .hero .imageContainer,
+.lightBox .imageContainerbox {
 
     display: flex;
     flex-direction: column;
@@ -166,27 +238,32 @@ color: var(--grayishblue);
     gap: 20px;
 }
 
-.MainContainer .hero .imageContainer img {
+.MainContainer .hero .imageContainer img,
+.lightBox .imageContainerbox img {
 
     background-color: transparent;
     transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
-.MainContainer .hero .imageContainer img:hover {
+.MainContainer .hero .imageContainer img:hover,
+.lightBox .imageContainerbox img:hover {
+
     cursor: pointer;
     background-color: var(--grayishblue);
-    opacity: 0.7;
+    /* opacity: 0.7; */
     box-shadow: 0 0 0 3px var(--orange);
 }
 
 
 
-.MainContainer .hero .imageContainer .Main-image {
+.MainContainer .hero .imageContainer .Main-image,
+.lightBox .imageContainerbox .Main-image {
     display: flex;
     justify-content: flex-end;
 }
 
-.MainContainer .hero .imageContainer .Main-image img {
+.MainContainer .hero .imageContainer .Main-image img,
+.lightBox .imageContainerbox .Main-image img {
 
     width: 30rem;
     height: 30rem;
@@ -201,13 +278,33 @@ color: var(--grayishblue);
     width: 100%;
 }
 
-.MainContainer .hero .imageContainer .thumbNails img {
+
+/*imageContainerbox thimbNail width style*/
+
+.lightBox .imageContainerbox .thumbNails {
+
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+}
+
+/*================================================*/
+
+.lightBox .imageContainerbox .thumbNails {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainContainer .hero .imageContainer .thumbNails img,
+.lightBox .imageContainerbox .thumbNails img {
 
 
     border-radius: 15px;
     width: 6rem;
     height: 6rem;
 }
+
 
 
 .MainContainer .hero .ProductInfo {

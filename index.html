@@ -11,7 +11,40 @@
 
 <body>
 
+  <div class="lightBox">
+
+    <div class="closeSvg">
+      <img src="/images/icon-close.svg" alt="">
+    </div>
+
+    <div class="imageContainerbox">
+
+      <div class="Main-image">
+
+        <img src="./images/image-product-1.jpg" alt="">
+
+      </div>
+
+      <div class="thumbNails">
+
+        <img src="./images/image-product-1-thumbnail.jpg" alt="">
+
+        <img src="./images/image-product-2-thumbnail.jpg" alt="">
+
+        <img src="./images/image-product-3-thumbnail.jpg" alt="">
+
+        <img src="./images/image-product-4-thumbnail.jpg" alt="">
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
   <header class="header">
+
 
     <svg class="logo" width="138" height="20" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -37,19 +70,22 @@
           fill="#69707D" fill-rule="nonzero" />
       </svg>
 
+
+      <!-- // toggle element -->
       <div class="myCartItems ">
 
         <div class="cartTxt">
-        <p>Cart</p>
+          <p>Cart</p>
         </div>
 
         <hr>
-        
+
         <div class="emptyCart">
-        <p>Your cart is empty.</p>
+          <p>Your cart is empty.</p>
 
         </div>
       </div>
+
 
       <div class="imgAvatar">
 
@@ -68,7 +104,7 @@
 
       <div class="imageContainer">
 
-        <div class="Main-image">
+        <div id="Main-image" class="Main-image">
 
           <img src="./images/image-product-1.jpg" alt="">
 
@@ -87,6 +123,7 @@
         </div>
 
       </div>
+
 
       <div class="ProductInfo">
 
@@ -160,7 +197,7 @@
 
   </main>
 
-<script src="code.js"></script>
+  <script src="code.js" defer></script>
 </body>
 
 </html>
