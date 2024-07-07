@@ -53,7 +53,7 @@ hr {
 
 }
 
-.lightBox .closeSvg img{
+.lightBox .closeSvg img {
 
     filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(330deg) brightness(109%) contrast(101%);
 }
@@ -74,6 +74,38 @@ hr {
     transition: opacity 1s ease;
 }
 
+.lightBox .imageContainerbox i {
+
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+    /* cursor: pointer; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+.lightBox .imageContainerbox i:hover {
+
+    cursor: pointer;
+    color: var(--orange);
+}
+
+.lightBox .imageContainerbox i:first-child {
+
+    right: 28.5rem;
+}
+
+.lightBox .imageContainerbox i:last-child {
+
+    left: 28.5rem;
+    ;
+}
 
 
 .header {
@@ -278,8 +310,20 @@ hr {
     width: 100%;
 }
 
+.active {
 
-/*imageContainerbox thimbNail width style*/
+    opacity: 0.5;
+    box-shadow: 0 0 0 3px var(--orange);
+}
+
+.active2{
+
+    filter: brightness(50%);
+    box-shadow: 0 0 0 3px var(--orange);
+}
+
+
+/*imageContainerbox thumbNail width style*/
 
 .lightBox .imageContainerbox .thumbNails {
 
