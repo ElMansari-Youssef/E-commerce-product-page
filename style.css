@@ -204,7 +204,7 @@ hr {
 
 
     opacity: 0;
-    height: 200px;
+    height: auto;
     width: 300px;
     background-color: var(--white);
     position: fixed;
@@ -244,7 +244,56 @@ hr {
     color: var(--paleorange);
 }
 
-.header .CartAvatarContainer img:hover {
+.checkoutItems {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    justify-content: center;
+    align-items: center;
+}
+
+.checkOut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    width: auto;
+}
+
+.checkOut-Img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.checkOut .checkOutTxt {
+    display: flex;
+
+}
+
+.checkOut .checkOut-text p {
+    font-size: 12px;
+}
+
+
+.checkoutItems .checkOutBtn {
+
+    width: 90%;
+    height: 3rem;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.header .CartAvatarContainer .imgAvatar img:hover {
 
     cursor: pointer;
     box-shadow: 0 0 0 3px var(--orange);
@@ -316,7 +365,7 @@ hr {
     box-shadow: 0 0 0 3px var(--orange);
 }
 
-.active2{
+.active2 {
 
     filter: brightness(50%);
     box-shadow: 0 0 0 3px var(--orange);

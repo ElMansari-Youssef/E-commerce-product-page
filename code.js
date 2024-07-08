@@ -9,12 +9,13 @@ let mainImg2 = document.querySelector(".imageContainer .Main-image img");
 let mainImgBox = document.querySelector(".imageContainerbox .Main-image img");
 
 
+
 thumbnails.forEach((element) => {
 
 
     element.addEventListener("click", () => {
 
-        thumbnails.forEach((element) => {element.classList.remove("active")});
+        thumbnails.forEach((element) => { element.classList.remove("active") });
 
         let str = element.outerHTML;
         let s = str.split("src=")[1].split('"')[1].slice(0, 24) + ".jpg";
@@ -53,7 +54,7 @@ close.addEventListener("click", () => {
 
 
 mainImg.addEventListener("click", () => {
-   
+
     let lightbox = document.querySelector(".lightBox");
     let header = document.querySelector(".header");
 
