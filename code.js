@@ -8,7 +8,53 @@ let thumbnails2 = document.querySelectorAll(".imageContainerbox .thumbNails img"
 let mainImg2 = document.querySelector(".imageContainer .Main-image img");
 let mainImgBox = document.querySelector(".imageContainerbox .Main-image img");
 
+let addTocard = document.querySelector(".btn");
+let emptyCart = document.querySelector(".myCartItems .emptyCart");
 
+let item3 = document.querySelector(".ItemsNumber .item3");
+let item1 = document.querySelector(".ItemsNumber .item1");
+
+
+
+
+item1.addEventListener("click", () => {
+
+    let spanText = document.querySelector(".ItemsNumber .item2 span").innerHTML;
+    let span2Number = parseInt(spanText);
+    let finalSpan = span2Number - 1;
+    if(finalSpan >= 0){
+    document.querySelector(".ItemsNumber .item2 span").innerHTML = finalSpan
+    }
+    
+})
+
+item3.addEventListener("click", () => {
+
+    let spanText = document.querySelector(".ItemsNumber .item2 span").innerHTML
+    let span2Number = parseInt(spanText);
+    let finalSpan = span2Number + 1;
+    document.querySelector(".ItemsNumber .item2 span").innerHTML = finalSpan
+
+})
+
+
+addTocard.addEventListener("click", () => {
+
+    let multiplier = document.querySelector(".ItemsNumber .item2 span").innerHTML;
+    let checkoutItems = document.querySelector(".checkoutItems");
+    let numbersOfitems = document.querySelector(".checkoutItems .checkOut .price .multiplier");
+    let itemPrice = document.querySelector(".checkoutItems .checkOut .price .itemPrice");
+    let total = document.querySelector(".checkoutItems .checkOut .price .total");
+
+    emptyCart.classList.add("hideEmptyCardtxt");
+    checkoutItems.classList.toggle("checkoutItemsVisibility");
+    
+    numbersOfitems.innerHTML = multiplier;
+   
+
+    total.innerHTML = "$" + (parseInt(itemPrice.textContent) * parseInt(numbersOfitems.innerHTML)).toFixed(2);
+
+})
 
 thumbnails.forEach((element) => {
 

@@ -104,7 +104,7 @@ hr {
 .lightBox .imageContainerbox i:last-child {
 
     left: 28.5rem;
-    ;
+
 }
 
 
@@ -199,6 +199,31 @@ hr {
     cursor: pointer;
 }
 
+.header .CartAvatarContainer .CartSvg {
+
+    position: relative;
+}
+
+.header .CartAvatarContainer .CartSvg::before {
+
+    /* Ch7al mn element (checkOut) kayen f lparent(checkoutItems) */
+    /* content: var(--NbrOfCheckoutItems); */
+    content: '3';
+    width: auto;
+    height: 15px;
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    padding: 0 5px;
+}
+
 
 .header .CartAvatarContainer .myCartItems {
 
@@ -250,6 +275,8 @@ hr {
     /* gap: 10px; */
     justify-content: center;
     align-items: center;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .checkOut {
@@ -267,13 +294,15 @@ hr {
     border-radius: 5px;
 }
 
-.checkOut .checkOutTxt {
-    display: flex;
-
-}
-
 .checkOut .checkOut-text p {
     font-size: 12px;
+    color: var(--grayishblue);
+}
+
+.checkOut .checkOut-text .price .total {
+
+    color: var(--verydarkblue);
+    font-weight: 800;
 }
 
 
@@ -359,6 +388,12 @@ hr {
     width: 100%;
 }
 
+/* toggle classes */
+.hideEmptyCardtxt {
+
+    display: none;
+}
+
 .active {
 
     opacity: 0.5;
@@ -369,6 +404,12 @@ hr {
 
     filter: brightness(50%);
     box-shadow: 0 0 0 3px var(--orange);
+}
+
+.checkoutItemsVisibility {
+
+    visibility: visible;
+    opacity: 1;
 }
 
 
