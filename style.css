@@ -8,6 +8,9 @@
     --black: hsl(0, 0%, 0%);
     /*with 75% opacity for lightbox background */
     --switcher: hidden;
+    --NbrOfCheckoutItems: "0";
+    --opacityy: 0;
+    --switcher2: hidden;
 
 }
 
@@ -207,8 +210,10 @@ hr {
 .header .CartAvatarContainer .CartSvg::before {
 
     /* Ch7al mn element (checkOut) kayen f lparent(checkoutItems) */
-    /* content: var(--NbrOfCheckoutItems); */
-    content: '3';
+
+    content: var(--NbrOfCheckoutItems);
+    visibility: var(--switcher2);
+    opacity: var(--opacityy);
     width: auto;
     height: 15px;
     position: absolute;
@@ -222,6 +227,7 @@ hr {
     align-items: center;
     font-size: 10px;
     padding: 0 5px;
+    transition: opacity 0.3s ease;
 }
 
 
@@ -277,6 +283,7 @@ hr {
     align-items: center;
     visibility: hidden;
     opacity: 0;
+    transition: opacity 1s ease-out;
 }
 
 .checkOut {
@@ -286,6 +293,7 @@ hr {
     gap: 15px;
     padding: 10px;
     width: auto;
+    transition: opacity 1s ease-out;
 }
 
 .checkOut-Img img {
@@ -305,6 +313,9 @@ hr {
     font-weight: 800;
 }
 
+.checkOut svg:last-child {
+    cursor: pointer;
+}
 
 .checkoutItems .checkOutBtn {
 
@@ -389,6 +400,7 @@ hr {
 }
 
 /* toggle classes */
+
 .hideEmptyCardtxt {
 
     display: none;
@@ -410,6 +422,7 @@ hr {
 
     visibility: visible;
     opacity: 1;
+    transition: opacity 1s ease, visibility 1s ease;
 }
 
 
