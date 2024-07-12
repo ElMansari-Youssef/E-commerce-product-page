@@ -20,6 +20,47 @@ let checkoutItems = document.querySelector(".checkoutItems .checkOut");
 
 let deleteSvg = document.querySelector(".checkOut svg:last-child")
 
+let imagesArr = ["./images/image-product-1.jpg", "./images/image-product-2.jpg", "./images/image-product-3.jpg", "./images/image-product-4.jpg"]
+
+let left = document.getElementById("left");
+let right = document.getElementById("right");
+let i = 1, currentIndex;
+
+right.addEventListener("click", () => {
+
+    if (i > 3) i = 0
+
+    currentIndex = imagesArr[i]
+    mainImgBox.src = currentIndex;
+
+    i++;
+
+    thumbnails2.forEach((element) => {
+
+
+
+
+        thumbnails2.forEach((element) => { element.classList.remove("active2") });
+
+        element.classList.add("active2");
+
+
+
+    })
+})
+
+left.addEventListener("click", () => {
+
+    i--;
+
+    if (i < 0) i = 3;
+    currentIndex = imagesArr[i];
+    mainImgBox.src = currentIndex;
+
+
+})
+
+
 
 deleteSvg.addEventListener("click", () => {
 
@@ -27,6 +68,9 @@ deleteSvg.addEventListener("click", () => {
     let root = document.querySelector(":root");
 
     checkoutItemsContainer.classList.remove("checkoutItemsVisibility");
+
+
+
 
     emptyCart.classList.remove("hideEmptyCardtxt");
 
@@ -36,7 +80,10 @@ deleteSvg.addEventListener("click", () => {
 
     document.querySelector(".ItemsNumber .item2 span").innerHTML = 0;
 
-    
+
+
+
+
 
 })
 
