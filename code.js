@@ -24,29 +24,45 @@ let imagesArr = ["./images/image-product-1.jpg", "./images/image-product-2.jpg",
 
 let left = document.getElementById("left");
 let right = document.getElementById("right");
-let i = 1, currentIndex;
+let i = 1;
+
+
+// ================Problem=======================
+
+// let menu = document.querySelector(".MenuLogo svg");
+// let MenuStyle = document.querySelector(".MenuStyle");
+// let MenuClose = document.querySelector(".MenuStyle svg");
+
+
+// MenuClose.addEventListener("click", () => {
+
+//     MenuStyle.style.visibility = "hidden";
+//     // MenuStyle.classList.remove("menuActive")
+
+// })
+
+// menu.addEventListener("click", () => {
+//     MenuStyle.style.visibility = "visible";
+//     // MenuStyle.classList.add("menuActive")
+
+// })
+
+// ==================================================
+
+
+
+
 
 right.addEventListener("click", () => {
 
-    if (i > 3) i = 0
+    // console.log(imagesArr.length);
+    if (i > imagesArr.length - 1) i = 0
 
-    currentIndex = imagesArr[i]
-    mainImgBox.src = currentIndex;
+    mainImgBox.src = imagesArr[i];
 
     i++;
 
-    thumbnails2.forEach((element) => {
 
-
-
-
-        thumbnails2.forEach((element) => { element.classList.remove("active2") });
-
-        element.classList.add("active2");
-
-
-
-    })
 })
 
 left.addEventListener("click", () => {
@@ -54,8 +70,7 @@ left.addEventListener("click", () => {
     i--;
 
     if (i < 0) i = 3;
-    currentIndex = imagesArr[i];
-    mainImgBox.src = currentIndex;
+    mainImgBox.src = imagesArr[i];
 
 
 })
