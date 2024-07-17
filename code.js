@@ -26,29 +26,24 @@ let left = document.getElementById("left");
 let right = document.getElementById("right");
 let i = 1;
 
+let menuLogo = document.querySelector(".MenuLogo");
+let menuStyle = document.querySelector(".MenuStyle");
+let menuClose = document.querySelector(".MenuStyle svg");
 
-// ================Problem=======================
+menuLogo.addEventListener("click", () => {
 
-// let menu = document.querySelector(".MenuLogo svg");
-// let MenuStyle = document.querySelector(".MenuStyle");
-// let MenuClose = document.querySelector(".MenuStyle svg");
+    menuStyle.style.visibility = "visible";
+    menuStyle.style.opacity = 1;
+    menuStyle.style.animation ="menu 0.3s ease-in-out ";
 
 
-// MenuClose.addEventListener("click", () => {
+    console.log("hello");
+})
 
-//     MenuStyle.style.visibility = "hidden";
-//     // MenuStyle.classList.remove("menuActive")
-
-// })
-
-// menu.addEventListener("click", () => {
-//     MenuStyle.style.visibility = "visible";
-//     // MenuStyle.classList.add("menuActive")
-
-// })
-
-// ==================================================
-
+menuClose.addEventListener("click", () => {
+    menuStyle.style.visibility = "hidden";
+    menuStyle.style.opacity = 0;
+})
 
 
 

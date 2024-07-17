@@ -153,14 +153,14 @@ header .MenuLogo {
 }
 
 header .menu {
-    /* visibility: hidden; */
+    visibility: hidden;
     cursor: pointer;
     margin-left: 2rem;
 
 }
 
 .MenuStyle {
-    visibility: hidden;
+    visibility: visible;
     opacity: 0;
     position: absolute;
     top: 0;
@@ -177,11 +177,6 @@ header .menu {
  
 }
 
-.menuActive{
-    /* animation: menu 0.8s ease; */
-    opacity: 1;
-    visibility: visible;
-}
 @keyframes menu {
 
     0% {
